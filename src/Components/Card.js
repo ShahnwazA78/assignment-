@@ -11,24 +11,33 @@ const images = [img1, img2, img3, img4, img5, img6];
 const Card = () => {
   return (
     <>
-    <div className="mx-auto min-w-sm flex justify-center mt-12">
-      <h1 className="text-center text-3xl font-semibold mb-12 font-sans uppercase text-primary">Communities we Manage</h1>
-    </div>
-    <div className="container gap-12 flex flex-wrap mx-auto w-full justify-center">
-      {communities.map((community, index) => (
-        <div key={index} className="max-w-xs overflow-hidden shadow-xs">
-          <img className="w-full" src={images[index]} alt={community.title} />
-          <div className="px-6 py-4">
-            <p className="text-primary text-base mt-2 font-normal font-sans">{community.description}</p>
+      <div className="mx-auto min-w-sm flex justify-center mt-12">
+        <h1 className="text-center text-3xl font-semibold mb-5 font-sans uppercase text-primary">
+          Communities we Manage
+        </h1>
+      </div>
+      <div className="communities flex flex-wrap gap-10 mx-auto justify-center">
+        {communities.map((community, index) => (
+          <div
+            key={index}
+            className="text-heading max-w-sm overflow-hidden shadow-xs"
+          >
+            <img className="w-full" src={images[index]} alt={community.title} />
+            <div className="px-6 py-4 ">
+              <p className="text-primary text-justify text-base mt-2 font-normal font-sans">
+                {community.description}
+              </p>
+            </div>
+            <div className="px-6 pt-4 pb-2 bg-gray-400">
+              <h3 className="text-xl font-sans text-primary font-normal">
+                {community.title}
+              </h3>
+            </div>
           </div>
-          <div className="px-6 pt-4 pb-2">
-            <h3 className="text-xl font-sans text-primary font-normal">{community.title}</h3>
-          </div>
-        </div>
-      ))}
-    </div>
-  </>
-  )
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default Card

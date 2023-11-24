@@ -16,7 +16,7 @@ const Carouselcard = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
       {
@@ -35,44 +35,56 @@ const Carouselcard = () => {
       },
     ],
   };
-  
+
   return (
     <>
-    <div className="mx-auto min-w-sm flex justify-center mt-12">
-        <h1 className="text-center text-3xl font-semibold mb-12 font-sans uppercase text-primary ">Our Services</h1>
-    </div>
-    <Slider {...settings}>
-      <div className="p-4 container gap-12 flex flex-wrap mx-auto w-full justify-center">
-        {/* Your slide content for the first slide */}
-        <div className="bg-gray-200 h-72"><img src={img1} alt="" /> </div>
+      <div className="mx-auto min-w-sm flex justify-center mt-12">
+        <h1 className="text-center text-3xl font-semibold mb-12 font-sans uppercase text-primary ">
+          Our Services
+        </h1>
       </div>
-      <div className="p-4">
-        {/* Your slide content for the second slide */}
-        <div className="bg-gray-200 h-72"><img src={img2} alt="" />  </div>
-      </div>
-      <div className="p-4">
-        {/* Your slide content for the third slide */}
-        <div className="bg-gray-200 h-72"><img src={img3} alt="" />  </div>
-      </div>
-      <div className="p-4">
-        {/* Your slide content for the third slide */}
-        <div className="bg-gray-200 h-72"><img src={img4} alt="" />  </div>
-      </div>
-      <div className="p-4">
-        {/* Your slide content for the third slide */}
-        <div className="bg-gray-200 h-72"><img src={img5} alt="" />  </div>
-      </div>
-      <div className="p-4">
-        {/* Your slide content for the third slide */}
-        <div className="bg-gray-200 h-72"><img src={img6} alt="" />  </div>
-      </div>
-      {/* Add more slides as needed */}
-    </Slider>
-      
-  
-    
+
+      <Slider {...settings}>
+        <div className="p-4 container gap-12 flex flex-wrap mx-auto w-full justify-center">
+          {/* Your slide content for the first slide */}
+          <div className="bg-gray-200 h-72">
+            <img src={img1} alt="" />{" "}
+          </div>
+        </div>
+        <div className="p-4">
+          {/* Your slide content for the second slide */}
+          <div className="bg-gray-200 h-72">
+            <img src={img2} alt="" />{" "}
+          </div>
+        </div>
+        <div className="p-4">
+          {/* Your slide content for the third slide */}
+          <div className="bg-gray-200 h-72">
+            <img src={img3} alt="" />{" "}
+          </div>
+        </div>
+        <div className="p-4">
+          {/* Your slide content for the third slide */}
+          <div className="bg-gray-200 h-72">
+            <img src={img4} alt="" />{" "}
+          </div>
+        </div>
+        <div className="p-4">
+          {/* Your slide content for the third slide */}
+          <div className="bg-gray-200 h-72">
+            <img src={img5} alt="" />{" "}
+          </div>
+        </div>
+        <div className="p-4">
+          {/* Your slide content for the third slide */}
+          <div className="bg-gray-200 h-72">
+            <img src={img6} alt="" />{" "}
+          </div>
+        </div>
+        {/* Add more slides as needed */}
+      </Slider>
     </>
-  )
+  );
 }
 
 export default Carouselcard
